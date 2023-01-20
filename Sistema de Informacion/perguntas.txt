@@ -1,3 +1,6 @@
 1.- ¿cuantos y cuales parametros debemos tener en cuenta?
+	- solo valoracion de 1-5 diaria de cada alumno de cada una de las asignaturas
 2.- ¿cuantos y cuales funciones debemos implementar?
+	- utilizar pandas_profiling 
 3.- ¿es necesario crear una interfaz visual o sirve con un archivo de python donde guardemos los metodos para poder utilizarlos cuando queramos?
+	- no
