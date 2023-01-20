@@ -1,0 +1,7 @@
+1.- Aprender a usar encuestas de google
+2.- Aprender a recepcionarlas por email
+3.- Crear una base de datos basica con los parametros de las preguntas del cuestionario
+4.- aprender a mover datos desde la recepcion de las respuestas hasta la base de datos (python?)
+5.- Crear el formulario definitivo
+6.- Crear la base de datos definitiva
+7.- Crear un programa de python que permita extraer informacion de la base de datos mediante funciones 
