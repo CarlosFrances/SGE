@@ -2,11 +2,11 @@ import smtplib
 import ssl
 from email.message import EmailMessage
 
-listaCorreos = ["carlos98frances@gmail.com","molins.carmen01@gmail.com","joseramonfran@gmail.com","berro.hermida@gmail.com"]
+listaCorreos = ["carlos98frances@gmail.com","joseramonfran@gmail.com"]
 
 def enviar_correo(correo_destino):
     email_sender = 'carlos98frances@gmail.com'
-    email_password = '100sanch100'
+    email_password = 'khfgsmbbuxtjefmw'
     email_receiver = correo_destino
 
     subject = 'Puntua a tus profesores'
@@ -26,5 +26,5 @@ def enviar_correo(correo_destino):
         smtp.login(email_sender, email_password)
         smtp.sendmail(email_sender, email_receiver, em.as_string())
         
-#for correo in listaCorreos:
-enviar_correo("carlos98frances@gmail.com")
+for correo in listaCorreos:
+    enviar_correo(correo)
