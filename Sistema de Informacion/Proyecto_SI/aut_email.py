@@ -2,7 +2,7 @@ import smtplib
 import ssl
 from email.message import EmailMessage
 
-listaCorreos = ["carlos98frances@gmail.com","joseramonfran@gmail.com"]
+listaCorreos = ["carlos98frances@gmail.com"]
 
 def enviar_correo(correo_destino):
     email_sender = 'carlos98frances@gmail.com'

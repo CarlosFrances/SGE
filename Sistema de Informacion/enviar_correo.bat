@@ -1,0 +1,1 @@
+"C:\Users\frenc\AppData\Local\Microsoft\WindowsApps\python.exe" "C:\Users\frenc\DAM2\REPOSITORIOS\SGE\Sistema de Informacion\Proyecto_SI\aut_email.py"
