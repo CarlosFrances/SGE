@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CMI Gimnasio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<body style="margin:1%;color:black;" background="background_CMI_2.jpg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <h1 style="color:cornflowerblue;">CMI FrenchiGYM</h1>
+                <h2 style="margin-top:5%;">Perspectiva financiera</h2>
+                <h5 style="color:green;" id="margenAnual"></h5>
+                <h5 style="color:green;" id="ingresosPorMiembro"></h5>
+                <h2 style="margin-top:5%;">Perspectiva de clientes</h2>
+                <h5 style="color:green;" id="numeroDeMiembros"></h5>
+                <h5 style="color:green;" id="porcentajeDeRenovacion"></h5>
+                <h2 style="margin-top:5%;">Perspectiva de procesos internos</h2>
+                <h5 style="color:green;" id="porcentajeDeOcupacionDeMaquinas"></h5>
+                <h5 style="color:green;" id="porcentajeDeOcupacionDeSalas"></h5>
+                <h2 style="margin-top:5%;">Perspectiva de aprendizaje y crecimiento</h2>
+                <h5 style="color:green;" id="porcentajeDeEntrenadoresCertificados"></h5>
+                <h5 style="color:green;" id="porcentajeDeEmpleadosSatisfechos"></h5>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Ingreso mensual"
+                            id="inputIngresoMensual" />
+                        <button class="col-4 btn btn-primary"
+                            onclick="actualizarIngresosMensuales()">Actualizar</button>
+                    </div>
+                </div>
+                <div class=" row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Gasto mensual"
+                            id="inputGastoMensual" />
+                        <button class="col-4 btn btn-primary" onclick="actualizarCostosMensuales()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Numero de miembros actual"
+                            id="inputNumeroDeMiembros" />
+                        <button class="col-4 btn btn-primary"
+                            onclick="actualizarNumeroDeMiembrosActual()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Renovaciones este mes"
+                            id="inputRenovacionesEsteMes" />
+                        <button class="col-4 btn btn-primary"
+                            onclick="actualizarRenovacionesMensuales()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Capacidad total máquinas"
+                            id="inputCapacidadTotalMaquinas" />
+                        <button class="col-4 btn btn-primary"
+                            onclick="actualizarCapacidadMaquinas()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Ocupacion media máquinas"
+                            id="inputOcupacionMediaMaquinas" />
+                        <button class="col-4 btn btn-primary"
+                            onclick="actualizarCapacidadMediaMaquinas()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Capacidad total en salas"
+                            id="inputCapacidadAulas" />
+                        <button class="col-4 btn btn-primary" onclick="actualizarCapacidadAulas()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Aulas ocupadas"
+                            id="inputAulasOcupadas" />
+                        <button class="col-4 btn btn-primary" onclick="actualizarAulasOcupadas()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Numero de entrenadores"
+                            id="inputNumeroDeEntrenadores" />
+                        <button class="col-4 btn btn-primary"
+                            onclick="actualizarNumeroDeEntrenadores()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Entrenadores certificados"
+                            id="inputEntrenadoresCertificados" />
+                        <button class="col-4 btn btn-primary"
+                            onclick="actualizarNumeroDeEntrenadoresCertificados()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Numero de empleados"
+                            id="inputNumeroDeEmpleados" />
+                        <button class="col-4 btn btn-primary"
+                            onclick="actualizarNumeroDeEmpleados()">Actualizar</button>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:3%;">
+                    <div class="input-group">
+                        <input type="number" class="col-8 form-control" placeholder="Empleados satisfechos"
+                            id="inputEmpleadosSatisfechos" />
+                        <button class="col-4 btn btn-primary"
+                            onclick="actualizarNumeroDeEmpleadosSatisfechos()">Actualizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h3 id="actualIngresosMensuales">Actual: 20000</h3>
+                <h3 id="actualGastoMensual" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualNumeroDeMiembros" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualRenovacionMensual" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualCapacidadMaquinas" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualCapacidadMediaMaquinas" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualTotalAulas" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualAulasOcupadas" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualNumeroDeEntrenadores" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualNumeroDeEntrenadoresCertificados" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualNumeroDeEmpleados" style="margin-top:8.5%;">Actual: 10000</h3>
+                <h3 id="actualNumeroDeEmpleadosSatisfechos" style="margin-top:8.5%;">Actual: 10000</h3>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        // Datos
+        var ingresosMensuales = 20000;
+        var costoMensual = 10000;
+        var numeroMiembros = 500;
+        var renovacionesMensuales = 400;
+        var capacidadMaquinas = 1000;
+        var maquinasOcupadas = 600;
+        var capacidadAulas = 100;
+        var aulasOcupadas = 80;
+        var numeroEntrenadores = 20;
+        var entrenadoresCertificados = 15;
+        var numeroEmpleados = 10;
+        var empleadosSatisfechos = 8;
+
+        // Cálculo de Indicador
+        var ingresosAnuales = ingresosMensuales * 12;
+        var costoAnual = costoMensual * 12;
+        var margenAnual = (ingresosAnuales - costoAnual) / ingresosAnuales * 100;
+        var ingresosPorMiembro = ingresosMensuales / numeroMiembros;
+        var porcentajeRenovacion = renovacionesMensuales / numeroMiembros * 100;
+        var porcentajeOcupacionMaquinas = maquinasOcupadas / capacidadMaquinas * 100;
+        var porcentajeOcupacionAulas = aulasOcupadas / capacidadAulas * 100;
+        var porcentajeEntrenadoresCertificados = entrenadoresCertificados / numeroEntrenadores * 100;
+        var porcentajeEmpleadosSatisfechos = empleadosSatisfechos / numeroEmpleados * 100;
+
+        // Funciones para capturar datos y modificar Indicadores
+        function actualizarIngresosMensuales() {
+            this.ingresosMensuales = document.querySelector("#inputIngresoMensual").value
+            this.ingresosAnuales = this.ingresosMensuales * 12
+            this.margenAnual = (ingresosAnuales - costoAnual) / ingresosAnuales * 100;
+            this.actualizarIndicador1()
+            document.querySelector("#actualIngresosMensuales").innerHTML = "Actual: " + this.ingresosMensuales
+            console.log(this.ingresosAnuales)
+        }
+
+        function actualizarCostosMensuales() {
+            this.costoMensual = document.querySelector("#inputGastoMensual").value
+            this.costoAnual = costoMensual * 12;
+            this.margenAnual = (ingresosAnuales - costoAnual) / ingresosAnuales * 100;
+            this.actualizarIndicador1()
+            document.querySelector("#actualGastoMensual").innerHTML = "Actual: " + this.costoMensual
+        }
+
+        function actualizarNumeroDeMiembrosActual() {
+            this.numeroMiembros = document.querySelector("#inputNumeroDeMiembros").value
+            this.ingresosPorMiembro = ingresosMensuales / numeroMiembros;
+            this.porcentajeRenovacion = renovacionesMensuales / numeroMiembros * 100;
+            this.actualizarIndicador3()
+            this.actualizarIndicador4()
+            document.querySelector("#actualNumeroDeMiembros").innerHTML = "Actual: " + this.numeroMiembros
+        }
+
+        function actualizarRenovacionesMensuales() {
+            this.renovacionesMensuales = document.querySelector("#inputRenovacionesEsteMes").value
+            this.porcentajeRenovacion = renovacionesMensuales / numeroMiembros * 100;
+            this.actualizarIndicador4()
+            document.querySelector("#actualRenovacionMensual").innerHTML = "Actual: " + this.renovacionesMensuales
+        }
+
+        function actualizarCapacidadMaquinas() {
+            this.capacidadMaquinas = document.querySelector("#inputCapacidadTotalMaquinas").value
+            this.porcentajeOcupacionMaquinas = maquinasOcupadas / capacidadMaquinas * 100;
+            this.actualizarIndicador5()
+            document.querySelector("#actualCapacidadMaquinas").innerHTML = "Actual: " + this.capacidadMaquinas
+        }
+
+        function actualizarCapacidadMediaMaquinas() {
+            this.maquinasOcupadas = document.querySelector("#inputOcupacionMediaMaquinas").value
+            this.porcentajeOcupacionMaquinas = maquinasOcupadas / capacidadMaquinas * 100;
+            this.actualizarIndicador5()
+            document.querySelector("#actualCapacidadMediaMaquinas").innerHTML = "Actual: " + this.maquinasOcupadas
+        }
+
+        function actualizarCapacidadAulas() {
+            this.capacidadAulas = document.querySelector("#inputCapacidadAulas").value
+            this.porcentajeOcupacionAulas = aulasOcupadas / capacidadAulas * 100;
+            this.actualizarIndicador6()
+            document.querySelector("#actualTotalAulas").innerHTML = "Actual: " + this.capacidadAulas
+        }
+
+        function actualizarAulasOcupadas() {
+            this.aulasOcupadas = document.querySelector("#inputAulasOcupadas").value
+            this.porcentajeOcupacionAulas = aulasOcupadas / capacidadAulas * 100;
+            this.actualizarIndicador6()
+            document.querySelector("#actualAulasOcupadas").innerHTML = "Actual: " + this.aulasOcupadas
+        }
+
+        function actualizarNumeroDeEntrenadores() {
+            this.numeroEntrenadores = document.querySelector("#inputNumeroDeEntrenadores").value
+            this.porcentajeEntrenadoresCertificados = entrenadoresCertificados / numeroEntrenadores * 100;
+            this.actualizarIndicador7()
+            document.querySelector("#actualNumeroDeEntrenadores").innerHTML = "Actual: " + this.numeroEntrenadores
+        }
+
+        function actualizarNumeroDeEntrenadoresCertificados() {
+            this.entrenadoresCertificados = document.querySelector("#inputEntrenadoresCertificados").value
+            this.porcentajeEntrenadoresCertificados = entrenadoresCertificados / numeroEntrenadores * 100;
+            this.actualizarIndicador7()
+            document.querySelector("#actualNumeroDeEntrenadoresCertificados").innerHTML = "Actual: " + this.entrenadoresCertificados
+        }
+
+        function actualizarNumeroDeEmpleados() {
+            this.numeroEmpleados = document.querySelector("#inputNumeroDeEmpleados").value
+            this.porcentajeEmpleadosSatisfechos = empleadosSatisfechos / numeroEmpleados * 100;
+            this.actualizarIndicador8()
+            document.querySelector("#actualNumeroDeEmpleados").innerHTML = "Actual: " + this.numeroEmpleados
+        }
+
+        function actualizarNumeroDeEmpleadosSatisfechos() {
+            this.empleadosSatisfechos = document.querySelector("#inputEmpleadosSatisfechos").value
+            this.porcentajeEmpleadosSatisfechos = empleadosSatisfechos / numeroEmpleados * 100;
+            this.actualizarIndicador8()
+            document.querySelector("#actualNumeroDeEmpleadosSatisfechos").innerHTML = "Actual: " + this.porcentajeEmpleadosSatisfechos
+        }
+
+        // Funciones para actualizar los Indicador
+        function actualizarIndicador1() {
+            document.getElementById("margenAnual").innerHTML = "Margen anual: " + margenAnual.toFixed(2) + "%";
+        }
+
+        function actualizarIndicador2() {
+            document.getElementById("ingresosPorMiembro").innerHTML = "Ingresos por miembro: $" + ingresosPorMiembro.toFixed(2);
+        }
+
+        function actualizarIndicador3() {
+            document.getElementById("numeroDeMiembros").innerHTML = "Número de miembros: " + numeroMiembros;
+        }
+
+        function actualizarIndicador4() {
+            document.getElementById("porcentajeDeRenovacion").innerHTML = "Porcentaje de renovación: " + porcentajeRenovacion.toFixed(2) + "%";
+        }
+
+        function actualizarIndicador5() {
+            document.getElementById("porcentajeDeOcupacionDeMaquinas").innerHTML = "Porcentaje de ocupación de máquinas: " + porcentajeOcupacionMaquinas.toFixed(2) + "%";
+        }
+
+        function actualizarIndicador6() {
+            document.getElementById("porcentajeDeOcupacionDeSalas").innerHTML = "Porcentaje de ocupación de salas: " + porcentajeOcupacionAulas.toFixed(2) + "%";
+        }
+
+        function actualizarIndicador7() {
+            document.getElementById("porcentajeDeEntrenadoresCertificados").innerHTML = "Porcentaje de entrenadores certificados: " + porcentajeEntrenadoresCertificados.toFixed(2) + "%";
+        }
+
+        function actualizarIndicador8() {
+            document.getElementById("porcentajeDeEmpleadosSatisfechos").innerHTML = "Porcentaje de empleados satisfechos: " + porcentajeEmpleadosSatisfechos.toFixed(2) + "%";
+        }
+
+        // Actualizar los Indicador
+        actualizarIndicador1();
+        actualizarIndicador2();
+        actualizarIndicador3();
+        actualizarIndicador4();
+        actualizarIndicador5();
+        actualizarIndicador6();
+        actualizarIndicador7();
+        actualizarIndicador8();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
